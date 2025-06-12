@@ -1,7 +1,7 @@
 import React from "react"
 import { Image, StyleSheet, View } from "react-native"
 import { useNavigation } from "@react-navigation/native"
-import AppLayout from "../components/AppLayout/AppLayout"
+import AppLayout from "../../components/AppLayout/AppLayout"
 import { Shadow } from "react-native-shadow-2"
 import { Text, VStack, HStack, Button, Box, Center } from "native-base"
 
@@ -15,7 +15,7 @@ export default function HomeScreen() {
         <Shadow distance={30} startColor="rgba(0,0,0,0.08)">
           <View style={styles.logoContainer}>
             <Image
-              source={require("../../assets/logo.png")}
+              source={require("../../../assets/logo.png")}
               style={styles.logo}
             />
           </View>
@@ -43,7 +43,7 @@ export default function HomeScreen() {
             borderRadius="xl"
             bg="#c23a6b"
             _pressed={{ bg: "#e84c88" }}
-            onPress={() => navigation.navigate("Login")}
+            onPress={() => navigation.navigate("SignIn")}
           >
             Entrar
           </Button>
