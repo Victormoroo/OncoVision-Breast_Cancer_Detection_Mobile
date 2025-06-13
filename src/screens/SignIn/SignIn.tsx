@@ -19,30 +19,31 @@ export default function Login() {
   const [user, setUser] = useState({ email: "", password: "" })
 
   const handleSubmit = async () => {
-    try {
-      if (!user.email || !user.password) {
-        throw new Error("Email e senha são obrigatórios")
-      }
+    // try {
+    //   if (!user.email || !user.password) {
+    //     throw new Error("Email e senha são obrigatórios")
+    //   }
 
-      // Aqui você pode chamar o UserService.login, por exemplo:
-      // const response = await UserService.login(user.email, user.password)
-      // saveToken(response.hash)
-      // saveUser(user.email)
+    //   // Aqui você pode chamar o UserService.login, por exemplo:
+    //   // const response = await UserService.login(user.email, user.password)
+    //   // saveToken(response.hash)
+    //   // saveUser(user.email)
 
-      toast.show({
-        title: `Bem-vindo(a), ${user.email}`,
-        placement: "top",
-        bgColor: "green.500",
-      })
+    //   toast.show({
+    //     title: `Bem-vindo(a), ${user.email}`,
+    //     placement: "top",
+    //     bgColor: "green.500",
+    //   })
 
-      navigation.navigate("Dashboard") // ajuste para a rota real
-    } catch (error: any) {
-      toast.show({
-        title: error.message || "Erro inesperado",
-        placement: "top",
-        bgColor: "red.500",
-      })
-    }
+    //   navigation.navigate("Dashboard") // ajuste para a rota real
+    // } catch (error: any) {
+    //   toast.show({
+    //     title: error.message || "Erro inesperado",
+    //     placement: "top",
+    //     bgColor: "red.500",
+    //   })
+    // }
+    navigation.navigate("Dashboard");
   }
 
   return (
